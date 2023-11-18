@@ -1,6 +1,8 @@
 # aubinbakana.github.io
 My Portfolio.
 
-A site designed to introduce my ahievements throughout the years mainly focusing on IT. 
+A site designed to introduce my ahievements throughout the years, mainly focusing on IT. 
 
-As of this day 18/11/23, the site is on pre-release; more updates to come. Please feel free to contact if you have any suggestions. Releade is scheduled for Monday 20th Novemember 2023. 
+Althought the content of the site is complete, as of this day 18/11/23, you are viewing a pre-released version of the site; more updates on the README yet to come, and the site will be developed continuously. Please feel free to get in touch if you have any suggestions. 
+
+Release is scheduled for Monday 20th Novemember 2023. 
