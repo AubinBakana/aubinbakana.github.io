@@ -8,4 +8,4 @@ Although the content of the site is complete, as of this day 18/11/23, you are v
 The site will be available at www.aubinbakana.net. Release is scheduled for Monday 20th Novemember 2023. 
 
 ## Roadmap
-* v. 0.0.1 
+* v0.0.1 
