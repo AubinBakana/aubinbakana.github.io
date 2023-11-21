@@ -1,11 +1,13 @@
 # Aubin Bakana, Portofolio
 
-A site designed to introduce my ahievements throughout the years, mainly focusing on IT. 
+A fully optimised website designed to introduce my ahievements throughout the years, mainly focusing on IT. 
+
+A combination of over 21 teamplates and static files. This a static webiste, so the contenu is self explanatory.
 
 ## Note:
-Although the content of the site is complete, as of this day 18/11/23, you are viewing a pre-released version of the site; more updates on the README yet to come, and the site will be developed continuously. Please feel free to get in touch if you have any suggestions. 
+The site is available at www.aubinbakana.com. 
 
-The site will be available at www.aubinbakana.net. Release is scheduled for Monday 20th Novemember 2023. 
+Launch date: 21/11/2023
 
 ## Roadmap
 * v0.0.1 
