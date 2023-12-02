@@ -13,4 +13,4 @@ function blink()
 }
 
 // Blink every 33100ms
-window.setInterval(blink, 3310);
+window.setInterval(blink, 1240);
