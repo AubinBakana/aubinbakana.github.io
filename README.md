@@ -2,7 +2,7 @@
 
 A fully optimised website designed to introduce my ahievements throughout the years, mainly focusing on IT. 
 
-A combination of over 21 teamplates and static files. This is a static webiste; the contenu is self explanatory.
+A combination of over 21 teamplates and static files. This is a static webiste; the content is self explanatory.
 
 ## Note:
 The site is available at www.aubinbakana.com. 
