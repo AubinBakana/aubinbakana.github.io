@@ -30,6 +30,11 @@
   height: 100%;
 }
 
+.golden-blue {
+  background-color: #072C50;
+  color: #B88746;
+}
+
 #content-wrap {
 padding-bottom: 0;    /* Footer height */
 }
