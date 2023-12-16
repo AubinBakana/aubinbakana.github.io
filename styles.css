@@ -39,6 +39,11 @@
   color: #B88746;
 }
 
+.purple-bg {
+  background-color: #2d1946;
+  color: floralwhite;
+}
+
 #content-wrap {
 padding-bottom: 0;    /* Footer height */
 }
