@@ -26,21 +26,12 @@ from google_cloud_pipeline_components.preview.llm \
 import rlhf_pipeline
 
 
-# In[ ]:
-
-
 # Import from KubeFlow pipelines
 from kfp import compiler
 
 
-# In[ ]:
-
-
 # Define a path to the yaml file. This file contains the RlHF pipeline definition
 RLHF_PIPELINE_PKG_PATH = "rlhf_pipeline.yaml"
-
-
-# In[ ]:
 
 
 # Execute the compile function
@@ -48,9 +39,6 @@ compiler.Compiler().compile(
     pipeline_func=rlhf_pipeline,
     package_path=RLHF_PIPELINE_PKG_PATH
 )
-
-
-# In[ ]:
 
 
 # To preview the pipeline content, we print the first lines of the YAML file
@@ -70,47 +58,26 @@ get_ipython().system('head rlhf_pipeline.yaml')
 # 
 # 
 
-# In[ ]:
-
-
 # Preference dataset size
 PREF_DATASET_SIZE = 3000
-
-
-# In[ ]:
 
 
 # Batch size is fixed at 64
 BATCH_SIZE = 64
 
 
-# In[ ]:
-
-
 import math
-
-
-# In[ ]:
 
 
 REWARD_STEPS_PER_EPOCH = math.ceil(PREF_DATASET_SIZE / BATCH_SIZE)
 print(REWARD_STEPS_PER_EPOCH)
 
 
-# In[ ]:
-
-
 REWARD_NUM_EPOCHS = 30
-
-
-# In[ ]:
 
 
 # Calculate number of steps in the reward model training
 reward_model_train_steps = REWARD_STEPS_PER_EPOCH * REWARD_NUM_EPOCHS
-
-
-# In[ ]:
 
 
 print(reward_model_train_steps)
@@ -121,48 +88,24 @@ print(reward_model_train_steps)
 # - The number of training steps depends on the size of your prompt dataset. Usually, this model should train over the prompt dataset for roughly 10-20 epochs.
 # - Reward hacking: if given too many training steps, the policy model may figure out a way to exploit the reward and exhibit undesired behavior.
 
-# In[ ]:
-
-
 # Prompt dataset size
 PROMPT_DATASET_SIZE = 2000
-
-
-# In[ ]:
-
 
 # Batch size is fixed at 64
 BATCH_SIZE = 64
 
 
-# In[ ]:
-
-
 import math
-
-
-# In[ ]:
-
 
 RL_STEPS_PER_EPOCH = math.ceil(PROMPT_DATASET_SIZE / BATCH_SIZE)
 print(RL_STEPS_PER_EPOCH)
 
 
-# In[ ]:
-
-
 RL_NUM_EPOCHS = 10
-
-
-# In[ ]:
 
 
 # Calculate the number of steps in the RL training
 reinforcement_learning_train_steps = RL_STEPS_PER_EPOCH * RL_NUM_EPOCHS
-
-
-# In[ ]:
-
 
 print(reinforcement_learning_train_steps)
 
@@ -170,9 +113,6 @@ print(reinforcement_learning_train_steps)
 # ### Define the instruction
 # 
 # 
-
-# In[ ]:
-
 
 # Completed values for the dictionary
 parameter_values={
@@ -194,9 +134,6 @@ parameter_values={
 
 # ### Set up Google Cloud to run the Vertex AI pipeline
 
-# In[ ]:
-
-
 # Authenticate in utils
 from utils import authenticate
 credentials, PROJECT_ID, STAGING_BUCKET = authenticate()
@@ -209,13 +146,7 @@ REGION = "europe-west4"
 # 
 # Now that we have created our dictionary of values, we can create a PipelineJob. Meaning, that the RLHF pipeline will execute on Vertex AI. So it's not running locally here in the notebook, but on some server on Google Cloud.
 
-# In[ ]:
-
-
 import google.cloud.aiplatform as vertexAI
-
-
-# In[ ]:
 
 
 vertexAI.init(project = PROJECT_ID,
@@ -223,14 +154,8 @@ vertexAI.init(project = PROJECT_ID,
                 credentials = credentials)
 
 
-# In[ ]:
-
-
 # Look at the path for the YAML file
 RLHF_PIPELINE_PKG_PATH
-
-
-# In[ ]:
 
 
 # Create a job
