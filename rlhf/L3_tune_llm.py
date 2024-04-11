@@ -9,17 +9,12 @@
 # 
 # 
 
-# In[ ]:
-
 
 get_ipython().system('pip3 install google-cloud-pipeline-components')
 get_ipython().system('pip3 install kfp')
 
 
 # ### Compile the pipeline
-
-# In[ ]:
-
 
 # Import the pipeline & components
 from google_cloud_pipeline_components.preview.llm \
