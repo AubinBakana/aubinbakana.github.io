@@ -78,6 +78,11 @@ li:hover {
     background-color: rgb(242, 242, 242);
 }
 
+/* list items with the no-highlight class with not have hover effect */
+ol.no-highlight li:hover, ul.no-highlight li:hover {
+  background-color: transparent; 
+}
+
 a.highlight:hover {
   background-color: rgb(242, 242, 242);
 }
